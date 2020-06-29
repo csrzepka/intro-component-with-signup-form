@@ -65,11 +65,8 @@ form.addEventListener('submit', e => {
  * @param message add error message under field
  */
 const addErrorTo = (field, message) => {
-    console.log(field);
-    console.log(form);
     const formControl = form[field].parentNode;
     formControl.classList.add('error');
-    console.log(formControl);
 
     const small = formControl.querySelector('small');
     small.innerText = message;
@@ -81,7 +78,6 @@ const addErrorTo = (field, message) => {
  */
 const removeErrorFrom = (field) => {
     const formControl = form[field].parentNode;
-    console.log(formControl);
     formControl.classList.remove('error');
 }
 
